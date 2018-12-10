@@ -1,0 +1,3 @@
+Juniper
+Model-10008
+verion 17.2

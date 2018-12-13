@@ -40,7 +40,7 @@
                 "attributes" : {"junos:style" : "brief"},
                 "rt-destination" : [
                 {
-                    "data" : "1.0.131.0/24"
+                    "data" : "1.0.131.0/21"
                 }
                 ],
                 "rt-entry" : [

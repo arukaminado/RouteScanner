@@ -25,6 +25,11 @@ def subnetextract(subnetvalue):
     ipextract=re.findall(r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}',subnetvalue) #extract the IP address from the list
     ipextractstr=str(ipextract[0]) #convert the IP address into a string value
     ipsubnets=[] #blank list to store the IP subnets range viz. 10.10.10.10/20 >> List value 10.10.10.10/21, 10.10.10.10/22, 10.10.10.10/23 & 10.10.10.10/24
+    prefix_subnets=list(ipaddress.ip_network(subnetvalue).subnets())
+    print(type(prefix_subnets))
+    print(prefix_subnets)
+    for x_value in prefix_subnets:
+            print(x_value.with_prefixlen)
     while subnetint<=32:
         if(subnetint>8)==True and (subnetint<=32)==True:
             subnetstr=str(subnetint)
